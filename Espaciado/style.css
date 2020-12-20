@@ -1,0 +1,30 @@
+body {
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	font-size: 20px;
+}
+
+.container {
+	display: grid;
+	grid-template: 300px 100px 100px / 50% 200px 100px;
+	gap: 10px 100px; /* Filas Columnas */
+}
+
+.item {
+	background-color: lightblue;
+	padding: 10px;
+	border: 1px solid orange;
+}
+
+/* Toma el elemento en especifico que designemos */
+.item:nth-of-type(4) {
+	background-color: pink;
+	overflow: auto;
+	display: grid;
+	grid-template: 50px 50px 50px / 120px 120px 120px;
+	/* display: subgrid;  Display subgrid para heredar la configuración del grid padre (cuando se estén anidando grids).*/
+	/* display: inline-grid; Display inline-grid muestra el grid en una sola linea:*/
+}
+
+.item .sub-item {
+	background-color: violet;
+}
