@@ -1,0 +1,26 @@
+body {
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	font-size: 20px;
+	margin: 0;
+}
+
+.container {
+	display: grid;
+	grid-template: repeat(4, 100px) / repeat(3, 200px);
+	height: 100vh;
+	gap: 5px;
+	justify-content: center; 
+	align-content: center;
+}
+
+.item {
+	background-color: lightblue;
+	padding: 10px;
+	border: 2px solid orange;
+}
+
+.item:nth-of-type(5) {
+	
+}
+
+

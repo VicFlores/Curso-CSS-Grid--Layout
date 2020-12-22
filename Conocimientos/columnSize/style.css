@@ -1,0 +1,37 @@
+body {
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	font-size: 20px;
+	margin: 0;
+}
+
+.container {
+	display: grid;
+	grid-template: repeat(4, 1fr) / repeat(3, 1fr);
+	gap: 10px; /* Si dejamos un valor se lo dara a ambos */
+	height: 100vh;
+}
+
+.item {
+	background-color: lightblue;
+	padding: 10px;
+	border: 1px solid orange;
+}
+
+/*! Nos ayuda a determinar la cantidad de columnas que queremos tomar */
+
+.item:nth-of-type(1) {
+	background-color: pink;
+	grid-column-start: 1;
+	grid-column-end: 3;
+}
+
+.item:nth-of-type(8) {
+	background-color: pink;
+	grid-column: 1 / span 2;
+}
+
+.item:nth-of-type(7) {
+	background-color: pink;
+	grid-column: 2 / 4; /* Forma resumida de grid-column-start y grid-column-end*/
+}
+

@@ -79,6 +79,54 @@ que contendrá dicho apartado, repetimos palabras para que tome la siguiente col
 
 ----------------------------------------------------------------------------------------------------------
 
+* Definir el tamaño de las columnas dentro de un grid:
+
+grid-column-start: 1;
+grid-column-end: 3;
+
+Para escribir esto en una sola linea:
+
+grid-column: inicio / final;
+Para usar por espacios: span #
+Para usar el espacio de toda la columna usamos -1 al final Ejemplo: grid-column: 1/ -1;
+
+* Definir el tamaño de las filas dentro de un grid:
+
+grid-row: 1 / span 2;
+
+----------------------------------------------------------------------------------------------------------
+
+Para nombrar lineas colocamos el nombre entre [ ]. Ejemplo:
+
+grid-template-columns: [inicio] 1fr [linea2] 1fr [final];
+En estos casos no podemos usar la función repeat()
+
+----------------------------------------------------------------------------------------------------------
+
+Para cambiar el flujo automático de mi grid:
+
+grid-auto-flow: column;
+Por defecto viene grid-auto-flow: row;
+Para asignar el valor por defecto de el espacio de las columnas o filas que no han sido asignadas:
+
+grid-auto-columns: valores;
+grid-auto-rows: valores;
+
+----------------------------------------------------------------------------------------------------------
+
+* Para alinear contenido:
+
+justify-items: valor; para alineación horizontal
+align-items: valor; para alineación vertical
+Los valores que toman por defecto es stretch el cual hace que tomen todo el valor asignado en la fila o columna.
+
+* Para asignar la alineación de un solo elemento podemos usar:
+
+align-self: valor;
+justify-self: valor;
+
+----------------------------------------------------------------------------------------------------------
+
 ----------------------------------------------------------------------------------------------------------
 
 ----------------------------------------------------------------------------------------------------------
