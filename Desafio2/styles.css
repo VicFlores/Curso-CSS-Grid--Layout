@@ -1,0 +1,170 @@
+body {
+	margin: 0;
+}
+
+.container {
+	height: 100%;
+	display: grid;
+	grid-template-columns: 325px 650px 1fr;
+	grid-template-rows: 300px 170px 1fr;
+	grid-template-areas: "navigation	movie					movie"
+											 "navigation	description		description"
+											 "navigation	comments			surreys";
+}
+
+/*! Navigation */
+
+.navigation {
+	grid-area: navigation;
+	border: 2px solid orange;
+	background-color: #1a1a2e;
+	color: whitesmoke;
+}
+
+.navigation h1,
+.navigation h4 {
+	text-align: center;
+}
+
+.navigation_playlist ol {
+	padding-left: 45px;
+	padding-right: 22px;
+}
+
+.navigation_playlist li {
+	margin-bottom: 22px;
+}
+
+.navigation_playlist-friends {
+	padding-top: 1em;
+}
+
+/*! Movie */
+
+.movie {
+	grid-area: movie;
+	border: 2px solid orange;
+	position: relative;
+}
+
+.movie img {
+	height: 100%;
+	width: 100%;
+}
+
+.movie_controls {
+	background-color: rgba(51, 49, 59, .6);
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+.movie_controls .back {
+	color: white;
+	font-size: 23px;
+	padding-top: 15px;
+	padding-left: 18px;
+}
+
+.movie_controls .play {
+	color: white;
+	font-size: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-top: 74px;
+}
+
+/*! Movie description */
+
+.movie_description {
+	grid-area: description;
+	border: 2px solid orange;
+	background-color: rgba(242, 242, 242, .8);
+}
+
+.movie_description h4 {
+	padding-left: 20px;
+	margin-bottom: 6px;
+}
+
+.movie_description p {
+	padding-left: 20px;
+	margin-top: 6px;
+}
+
+.movie_buttons {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.movie_options {
+	padding-left: 20px;
+}
+
+.movie_options button {
+	cursor: pointer;
+}
+
+.button_add {
+	width: 150px;
+	padding: 10px;
+	margin-right: 15px;
+}
+
+.button_share {
+	width: 85px;
+	padding: 10px;
+	margin-right: 15px;
+}
+
+.button_save {
+	width: 85px;
+	padding: 10px;
+}
+
+.movie_quality {
+	padding-right: 20px;
+	
+}
+
+.button_4k,
+.button_2k,
+.button_720,
+.button_480 {
+	width: 55px;
+	height: 28px;
+	margin-right: 10px;
+}
+
+.button_2k {
+
+}
+
+.button_720 {
+
+}
+
+.button_480 {
+
+}
+
+/*! Comments */
+
+.comments {
+	grid-area: comments;
+	border: 2px solid orange;
+	background-color: rgba(242, 242, 242, .9);
+}
+
+/*! Suggestions */
+
+.suggestions {
+	grid-area: surreys;
+	border: 2px solid orange;
+	background-color: rgba(242, 242, 242, .9);
+	padding: 10px;
+}
